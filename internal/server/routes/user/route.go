@@ -19,3 +19,9 @@ func (r *RoutesUser) RoutesInit(g *echo.Group) {
 	}
 
 }
+
+
+func (r RoutesUser) RouteImplement (){
+
+
+}

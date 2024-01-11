@@ -33,7 +33,7 @@ func (u User) Login(userDTO dto.User) (*dto.User, error) {
 
 	if err := bcrypt.CompareHashAndPassword([]byte(userDB.PasswordHash), []byte(userDTO.PasswordHash)); err != nil {
 
-		return nil, fmt.Errorf("wrong password")
+		return nil, fmt.Errorf("wrong password or user")
 	}
 
 	return &userDB, nil
